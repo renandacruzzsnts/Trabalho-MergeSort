@@ -40,13 +40,12 @@ class MergeSortTimer {
         this.updateStatus('Executando algoritmo MergeSort...');
         this.startProgressAnimation();
         
-        // Atualizar o cronômetro a cada 10ms para maior precisão
+        
         this.timerInterval = setInterval(() => {
             this.updateTimer();
         }, 10);
         
-        // Simular o tempo de execução do MergeSort (entre 2-8 segundos)
-        const simulationTime = Math.random() * 6000 + 2000; // 2-8 segundos
+        const simulationTime = Math.random() * 6000 + 2000; 
         this.simulationTimeout = setTimeout(() => {
             this.stopTimer();
         }, simulationTime);
@@ -124,7 +123,7 @@ class MergeSortTimer {
     }
     
     showResult(timeSeconds) {
-        const numberCount = 700000; // Número de elementos ordenados
+        const numberCount = 700000; 
         const numbersPerSecond = Math.round(numberCount / timeSeconds);
         
         this.finalTime.textContent = timeSeconds;
@@ -134,13 +133,13 @@ class MergeSortTimer {
         
         this.updateStatus('Ordenação concluída com sucesso!');
         
-        // Mostrar resultado com animação
+      
         setTimeout(() => {
             this.result.classList.remove('hidden');
         }, 500);
     }
     
-    // Implementação do MergeSort em JavaScript (para demonstração)
+    
     static mergeSort(arr) {
         if (arr.length <= 1) return arr;
         
@@ -172,17 +171,17 @@ class MergeSortTimer {
     }
 }
 
-// Inicializar a aplicação quando o DOM estiver carregado
+
 document.addEventListener('DOMContentLoaded', () => {
     new MergeSortTimer();
     
-    // Adicionar algumas informações extras sobre o algoritmo
+
     console.log('🚀 Cronômetro MergeSort inicializado!');
     console.log('📊 Complexidade: O(n log n)');
     console.log('🔢 Números a ordenar: 700.000');
 });
 
-// Função para demonstrar o MergeSort com um array pequeno
+
 function demonstrateMergeSort() {
     const smallArray = [64, 34, 25, 12, 22, 11, 90];
     console.log('Array original:', smallArray);
@@ -195,6 +194,6 @@ function demonstrateMergeSort() {
     console.log(`Tempo de execução: ${(endTime - startTime).toFixed(3)}ms`);
 }
 
-// Executar demonstração no console
+
 setTimeout(demonstrateMergeSort, 1000);
 

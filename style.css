@@ -211,7 +211,7 @@ footer p {
     animation: pulse 2s infinite;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .container {
         padding: 20px;
