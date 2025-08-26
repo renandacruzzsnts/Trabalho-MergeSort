@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro MergeSort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cronômetro de Ordenação MergeSort</h1>
+            <p>Cronometrando o tempo de execução do algoritmo de ordenação</p>
+        </header>
+
+        <main>
+            <div class="timer-section">
+                <div class="timer-display">
+                    <span id="timer">0.000</span>
+                    <span class="unit">segundos</span>
+                </div>
+                
+                <div class="controls">
+                    <button id="startBtn" class="btn btn-start">Iniciar Ordenação</button>
+                    <button id="resetBtn" class="btn btn-reset" disabled>Reiniciar</button>
+                </div>
+            </div>
+
+            <div class="status-section">
+                <div id="status" class="status">Pronto para iniciar</div>
+                <div class="progress-bar">
+                    <div id="progress" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div id="result" class="result-section hidden">
+                <div class="result-icon">✅</div>
+                <h2>Ordenação Concluída!</h2>
+                <p id="resultMessage">O algoritmo MergeSort organizou todos os números com sucesso.</p>
+                <div class="final-time">
+                    Tempo total: <span id="finalTime">0.000</span> segundos
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Algoritmo MergeSort - Complexidade O(n log n)</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
