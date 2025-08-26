@@ -12,7 +12,7 @@ public class Main {
         String inputFile = "numbers.txt";
         String outputFile = "sorted_numbers.txt";
 
-        // Read numbers from file
+        
         try (BufferedReader br = new BufferedReader(new FileReader(inputFile))) {
             String line;
             while ((line = br.readLine()) != null) {
@@ -23,13 +23,13 @@ public class Main {
             return;
         }
 
-        // Convert List to array for MergeSort
+        
         int[] arr = numbers.stream().mapToInt(i -> i).toArray();
 
-        // Sort using MergeSort
+        
         MergeSort.sort(arr);
 
-        // Write sorted numbers to file
+        
         try (FileWriter fw = new FileWriter(outputFile)) {
             for (int number : arr) {
                 fw.write(number + "\n");
